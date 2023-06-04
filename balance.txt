@@ -1,0 +1,37 @@
+//Method 1
+InputStreamReader ir=new InputStreamReader(System.in);
+        BufferedReader br=new BufferedReader(ir);
+        FileInputStream f=new FileInputStream("balance.txt");
+        File file=new File("balance.txt");
+        char[] cur_bal=new char[(int) file.length()];
+        int i=f.read(),t=0;
+        System.out.println("Enter the amount u want to deposit");
+        int dep_amt=Integer.parseInt(br.readLine());
+        while(i!=-1){
+            cur_bal[t++]=(char)i;
+            i=f.read();
+        }
+        int cur_bal2=Integer.parseInt(String.valueOf(cur_bal));
+        cur_bal2+=dep_amt;
+        f.close();
+        FileOutputStream fo=new FileOutputStream("balance.txt");
+        byte[] b=(String.valueOf(cur_bal2)).getBytes();
+        fo.write(b);
+        System.out.println("Amount successfully deposited.");
+        fo.close();
+
+//Method 2
+Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the deposit Amount");
+        int deposit_amount=sc.nextInt();
+
+        Scanner sc1=new Scanner(new File("balance.txt"));
+        int cur_balance=sc1.nextInt();
+
+        cur_balance+=deposit_amount;
+
+        FileOutputStream f=new FileOutputStream("balance.txt");
+        String s=Integer.toString(cur_balance);
+        byte[] b=s.getBytes();
+        f.write(b);
+        f.close();
