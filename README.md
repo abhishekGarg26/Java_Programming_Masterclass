@@ -18,5 +18,5 @@ In this comprehensive course I was equiped with the essential skills needed to p
 
 ## SUMMARY
 
-By completing this course, I was equipped with the skills and knowledge necessary to excel as a junior Java developer. Start your journey today and enhance your Java programming prowess.
+By completing this course, I was equipped with the skills and knowledge necessary to excel as a junior Java developer.Additionally, the course exercises were conducted using IntelliJ IDEA as the integrated development environment (IDE) for managing the Java project. Start your journey today and enhance your Java programming prowess.
 
